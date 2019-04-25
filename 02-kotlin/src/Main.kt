@@ -1,3 +1,4 @@
+import java.lang.NullPointerException
 import java.util.*
 
 fun main(args : Array<String>) {
@@ -138,6 +139,8 @@ fun main(args : Array<String>) {
     }
     println(totalTazos)
 
+    val numerito = Numero("1")
+
 }
 
 fun estaJalado(nota:Double):Unit{
@@ -180,3 +183,103 @@ fun sumarDosNumeros(numUno: Int, numDos: Int): Int{
 
 
 
+
+class Usuario(val cedula:String){
+    public var nombre:String = ""
+    public var apellido:String=""
+
+    constructor(cedulaM: String,
+                apellido:String):this(cedulaM){
+        this.apellido = apellido
+    }
+}
+
+class UsuarioKT(var nombre:String,
+                var apellido: String//,
+                ///private var id:Int,
+                //protected var id:Int
+){
+
+    fun hola():String{
+        return this.apellido
+    }
+
+    companion object {
+        val gravedad = 10.5
+        fun correr(){
+            println("Estoy corriendo en $gravedad")
+        }
+    }
+
+
+
+}
+
+class BaseDeDatos{
+    companion object {
+        val usuarios = arrayListOf(1,2,3)
+        fun agregarUsuaruo(usuario:Int){
+            this.usuarios.add(usuario)
+        }
+    }
+}
+
+fun aa(){
+    UsuarioKT.gravedad
+    UsuarioKT.correr()
+}
+
+fun a(){
+    var erick = UsuarioKT("a", "b")
+    erick.nombre = "sffefr"
+}
+
+
+class Numero(var numero:Int){
+    constructor(numeroString:String):this(numeroString.toInt()){
+        println("Constructor")
+    }
+
+    init {
+        println("INIT")
+        this.numero
+    }
+}
+
+open class Numeros(var numeroUno:Int,
+              var numeroDos:Int){
+
+}
+
+class Suma(var numeroUnos:Int,
+              var numeroDoss:Int):
+    Numeros(numeroUnos,numeroDoss){
+
+}
+
+fun cc(){
+    val a = Suma(1,2)
+    val b = Numeros(1,2)
+}
+
+
+
+fun presley(requerido:Int,
+            opcional:Int = 1,
+            nulo: UsuarioKT?){
+    if(nulo != null){
+        nulo.nombre
+        nulo.nombre
+    }
+    val nombresito:String? = nulo?.nombre.toString()
+    nulo!!.nombre
+
+
+}
+
+fun cddd(){
+    presley(requerido = 1, nulo = null) //Named parameters
+    presley(1,1,null) //Named parameters
+    presley(1,1,null)
+
+}
