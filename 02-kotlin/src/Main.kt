@@ -1,6 +1,3 @@
-
-
-
 import java.lang.NullPointerException
 import java.util.*
 
@@ -287,4 +284,3 @@ fun cddd(){
     presley(1,1,null)
 
 }
-
