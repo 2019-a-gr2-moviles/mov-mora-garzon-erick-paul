@@ -1,11 +1,8 @@
 import javax.swing.*
 import java.awt.*
-import java.awt.event.ActionEvent
-import java.awt.event.ActionListener
+import java.io.File
 import javax.swing.JFrame
-import javax.swing.JLabel
 import javax.swing.JButton
-import javax.swing.SwingConstants.LEADING
 
 class Principal(title: String) : JFrame(){
     /*val panel: JPanel ?= JPanel()
@@ -48,6 +45,14 @@ class Principal(title: String) : JFrame(){
             val btnVideojuego = JButton("Videojuegos")
             val btnVentas = JButton("Ventas")
 
+            val opciones: Array<Any> = arrayOf("Insertar","Consultar","Modificar","Eliminar")
+
+            var listaVideojuego : Videojuego
+
+           // var leer : BaseDatosVideojuego
+
+            var registroVideojuego = ""
+
 
 
             val stdBtn = arrayOf<JButton>(btnVideojuego, btnVentas)
@@ -64,7 +69,55 @@ class Principal(title: String) : JFrame(){
             btnVideojuego.addActionListener {
 
                 //println("boton juego")
-                System.exit(0)
+                //System.exit(0)
+                val result = JOptionPane.showOptionDialog(null, "Seleccione una opción","Videojuegos", 1,1,null, opciones,null)
+                when(result){
+                    0->{
+
+                        val codJuego = JOptionPane.showInputDialog("Ingrese el Código del videojuego")
+                        val nomJuego = JOptionPane.showInputDialog("Ingrese el Nombre del videojuego")
+                        val precioJuego = JOptionPane.showInputDialog("Ingrese el Precio del videojuego")
+                        val genJuego = JOptionPane.showInputDialog("Ingrese el Género del videojuego")
+                        val clasifJuego = JOptionPane.showInputDialog("Ingrese la Clasificación del videojuego")
+                        val platJuego = JOptionPane.showInputDialog("Ingrese la Plataforma del videojuego")
+                        val distJuego = JOptionPane.showInputDialog("Ingrese la Distribuidora del videojuego")
+
+                        registroVideojuego="\n"+codJuego+","+nomJuego+","+precioJuego+","+genJuego+","+clasifJuego+","+platJuego+","+distJuego+";"
+
+
+                        //listaVideojuego.agregarVideojuego(codJuego,nomJuego,precioJuego,genJuego,clasifJuego,platJuego,distJuego)
+
+                        JOptionPane.showMessageDialog(null, "Videojuego registrado")
+                        println(registroVideojuego)
+                        escribirArchivo(registroVideojuego)
+                        leerContenido()
+                    }
+                    1->{
+                        val codJuego = JOptionPane.showInputDialog("Ingrese el Código del videojuego a buscar")
+
+                       // listaVideojuego.consultarVideojuego(codJuego)
+
+                        JOptionPane.showMessageDialog(null, "Datos: ")
+                    }
+                    2->{
+                        val codJuego = JOptionPane.showInputDialog("Ingrese el Código del videojuego a modificar")
+                        val nomJuego = JOptionPane.showInputDialog("Ingrese el Nombre del videojuego")
+                        val precioJuego = JOptionPane.showInputDialog("Ingrese el Precio del videojuego")
+                        val genJuego = JOptionPane.showInputDialog("Ingrese el Género del videojuego")
+                        val clasifJuego = JOptionPane.showInputDialog("Ingrese la Clasificación del videojuego")
+                        val platJuego = JOptionPane.showInputDialog("Ingrese la Plataforma del videojuego")
+                        val distJuego = JOptionPane.showInputDialog("Ingrese la Distribuidora del videojuego")
+
+                        JOptionPane.showMessageDialog(null, "Datos de Videojuego modificados")
+                    }
+                    3->{
+                        val codJuego = JOptionPane.showInputDialog("Ingrese el Código del videojuego a eliminar")
+
+                        JOptionPane.showMessageDialog(null, "Videojuego eliminado")
+                    }
+
+                }
+
 
             }
             btnVentas.
@@ -77,10 +130,10 @@ class Principal(title: String) : JFrame(){
                     System.exit(0)
                 }
 
-            createLayout(buttons)
+            //createLayout(buttons)
             //createLayout(btnVentas)
-            //createLayout(btnVideojuego)
-            ///createLayout(btnVentas)
+            createLayout(btnVideojuego)
+
 
 
             defaultCloseOperation = JFrame.EXIT_ON_CLOSE
@@ -143,3 +196,37 @@ class Principal(title: String) : JFrame(){
     fun main(args: Array<String>) {
         EventQueue.invokeLater(::createAndShowGUI)
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fun leerContenido() {
+    val fileName = "src/baseVideojuegos.txt"
+
+    val lines: List<String> = File(fileName).readLines()
+
+    lines.forEach { line -> println(line) }
+}
+
+fun escribirArchivo(args: String) {
+    val fileName = "src/baseVideojuegos.txt"
+
+    val myfile = File(fileName)
+
+    myfile.appendText(args)
+
+    }
+

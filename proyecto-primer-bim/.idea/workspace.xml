@@ -2,10 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8304e6b5-03e3-4c14-a97c-8b2a32d4eb3a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BaseDatosVideojuego.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Videojuego.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseVideojuegos.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto-primer-bim/META-INF/proyecto-primer-bim.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto-primer-bim/META-INF/proyecto-primer-bim.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto-primer-bim/Principal$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto-primer-bim/Principal$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto-primer-bim/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto-primer-bim/Principal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto-primer-bim/PrincipalKt$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto-primer-bim/PrincipalKt$main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto-primer-bim/PrincipalKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto-primer-bim/PrincipalKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto-primer-bim/Videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto-primer-bim/Videojuego.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActualizarVenta.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActualizarVenta.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActualizarVideojuego.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActualizarVideojuego.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsultarVenta.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsultarVenta.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsultarVideojuego.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsultarVideojuego.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EliminarVenta.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EliminarVenta.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EliminarVideojuego.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EliminarVideojuego.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IngresarVentas.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IngresarVentas.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IngresarVideojuego.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IngresarVideojuego.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Principal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ventas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventas.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Videojuego.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +44,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -31,13 +56,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Principal.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="247">
+              <caret line="232" selection-start-line="232" selection-end-line="232" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BaseDatosVideojuego.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
-                <element signature="e#0#229#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,20 +80,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ventas.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1604">
+            <state relative-caret-position="227">
               <caret line="101" column="1" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
               <folding>
-                <element signature="e#0#306#0" expanded="true" />
+                <element signature="e#0#285#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Videojuego.java">
+        <entry file="file://$PROJECT_DIR$/src/Videojuego.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="261">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
+              <folding>
+                <element signature="e#0#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseVideojuegos.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -69,8 +115,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -96,19 +142,17 @@
         <option value="$PROJECT_DIR$/src/Videojuego.java" />
         <option value="$PROJECT_DIR$/src/Main.kt" />
         <option value="$PROJECT_DIR$/src/Ventas.kt" />
+        <option value="$PROJECT_DIR$/src/videojuegos.txt" />
+        <option value="$PROJECT_DIR$/src/IngresarVideojuego.kt" />
+        <option value="$PROJECT_DIR$/src/baseDatosVideojuego.kt" />
+        <option value="$PROJECT_DIR$/src/BaseDatosVideojuego.kt" />
+        <option value="$PROJECT_DIR$/src/baseVideojuegos.txt" />
         <option value="$PROJECT_DIR$/src/Principal.kt" />
+        <option value="$PROJECT_DIR$/src/Videojuego.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="170" />
     <option name="y" value="91" />
     <option name="width" value="1026" />
@@ -120,6 +164,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,8 +182,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,8 +250,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2118003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -216,7 +261,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32843137" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -236,12 +281,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/IngresarVentas.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IngresarVideojuego.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EliminarVideojuego.kt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -265,9 +304,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IngresarVentas.form">
       <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActualizarVenta.kt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ActualizarVideojuego.form">
       <provider selected="true" editor-type-id="ui-designer" />
@@ -293,20 +329,68 @@
     <entry file="file://$PROJECT_DIR$/src/Videojuego.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Videojuego.java">
+    <entry file="file://$PROJECT_DIR$/src/ActualizarVenta.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IngresarVentas.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IngresarVideojuego.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Videojuego.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseVideojuegos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ventas.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1604">
+        <state relative-caret-position="227">
           <caret line="101" column="1" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
           <folding>
-            <element signature="e#0#306#0" expanded="true" />
+            <element signature="e#0#285#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BaseDatosVideojuego.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Principal.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="232" selection-start-line="232" selection-end-line="232" />
         </state>
       </provider>
     </entry>
@@ -316,16 +400,6 @@
           <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="31" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Principal.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#0#229#0" expanded="true" />
           </folding>
         </state>
       </provider>
