@@ -237,8 +237,8 @@ fun modificarVideojuego(codigo: String){
             text+="${it.codigoVideojuego},${it.nombreVideojuego},${it.precio},${it.genero},${it.clasificacion},${it.plataforma},${it.distribuidora}\n"
         }
 
-        escribirArchivo(text, "baseVideojuego.txt")
-        leerContenidoVideojuego("baseVideojuego.txt")
+        escribirArchivo(text, "baseVideojuegos.txt")
+        leerContenidoVideojuego("baseVideojuegos.txt")
 
         JOptionPane.showMessageDialog(null, "Datos de Videojuego modificados")
     }
