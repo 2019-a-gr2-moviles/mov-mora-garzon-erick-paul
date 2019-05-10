@@ -1,2 +1,0 @@
-AA08,WOW,20.0,Estrategia,T,Windows,Games
-AA04,WOW,30.0,Estrategia,T,Windows,Games

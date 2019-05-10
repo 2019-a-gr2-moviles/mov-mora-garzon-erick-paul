@@ -147,14 +147,7 @@ fun ingresarVideojuego() {
 
 
 
-fun consultarListaVideojuegos() {
-    val listaVideojuego = arrayListOf<Videojuego>()
-    var juego: String = ""
-    for (item: Videojuego in listaVideojuego) {
-        juego += item.toString()
-    }
-    JOptionPane.showMessageDialog(null, juego)
-}
+
 
 fun consultarVideojuego(codigo: String){
     var registro = ""
@@ -277,14 +270,6 @@ fun ingresarVenta() {
 
 
 
-fun consultarListaVentas() {
-    val listaVenta = arrayListOf<Venta>()
-    var venta = ""
-    for (item: Venta in listaVenta) {
-        venta += item.toString()
-    }
-    JOptionPane.showMessageDialog(null, venta)
-}
 
 fun consultarVenta(codigo: String){
     var registro = ""
