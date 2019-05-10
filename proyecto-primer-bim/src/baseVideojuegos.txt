@@ -1,5 +1,3 @@
 AA01,Plantas vs. zombies,5.0,Tower defense,E,PlayStation 3,PopCap Games
 AA02,Fortnite,40.0,Supervivencia,T,Nintendo Switch,Epic Games
 AA03,Super Mario Maker,24.0,Plataformas,E,Nintendo 3DS,Nintendo
-AA04,LOL,10.0,Estrategia,T,Windows,Games
-AA08,DOTA,20.0,Estrategia,T,Windows,Games
