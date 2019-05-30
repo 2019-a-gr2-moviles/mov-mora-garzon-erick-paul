@@ -6,6 +6,8 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+
 
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -18,7 +20,15 @@ class MainActivity : AppCompatActivity() {
 
         btn_parcelable.setOnClickListener {
             irAParcelable()
+
+
         }
+
+        btn_adapter.setOnClickListener {
+            irAListView()
+            mostrarSnack(it,"Texto snack")
+        }
+
         //setSupportActionBar(toolbar)
 
         /*fab.setOnClickListener { view ->
@@ -59,5 +69,19 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentExplicito)
     }
 
+    fun irAListView(){
+        val intentExplicito = Intent(
+            this,
+            ListViewActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+    fun mostrarSnack(view: View, texto:String){
+        Snackbar
+            .make(view, texto, Snackbar.LENGTH_LONG)
+            .setAction("Action", null).show()
+
+    }
 
 }
