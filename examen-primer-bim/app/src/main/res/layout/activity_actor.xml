@@ -7,7 +7,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Nombre"
+            android:text="@string/nombre"
             android:ems="10"
             android:id="@+id/tBNombre" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Apellido"
+            android:text="@string/apellido"
             android:ems="10"
             android:id="@+id/tBApelllido" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
@@ -29,7 +29,7 @@
             android:inputType="date"
             android:ems="10"
             android:id="@+id/tBFechaNac"
-            android:text="Fecha Nacimiento" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/fechaNac" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="8dp" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginTop="44dp"
@@ -40,13 +40,13 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/tBNumPel"
-            android:text="Numero peliculas" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/numPel" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="8dp" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginTop="56dp"
             app:layout_constraintTop_toBottomOf="@+id/tBFechaNac"/>
     <CheckBox
-            android:text="Retirado"
+            android:text="@string/retirado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cBRetirado" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -55,20 +55,20 @@
             app:layout_constraintTop_toBottomOf="@+id/tBNumPel" app:layout_constraintHorizontal_bias="0.498"
             android:layout_marginTop="44dp"/>
     <Button
-            android:text="Eliminar"
+            android:text="@string/eliminar"
             android:layout_width="145dp"
             android:layout_height="62dp" tools:layout_editor_absoluteY="536dp"
             android:id="@+id/btnEliminar" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/btnActualizar"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
     <Button
-            android:text="Actualizar"
+            android:text="@string/actualizar"
             android:layout_width="145dp"
             android:layout_height="62dp" tools:layout_editor_absoluteY="536dp"
             android:id="@+id/btnActualizar" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"/>
     <Button
-            android:text="Gestionar peliculas"
+            android:text="@string/gestionPel"
             android:layout_width="145dp"
             android:layout_height="62dp"
             android:id="@+id/btnGestionarPel" app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +77,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btnEliminar" app:layout_constraintEnd_toStartOf="@+id/btnCrearPel"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
     <Button
-            android:text="Crear peliculas"
+            android:text="@string/crearPel"
             android:layout_width="145dp"
             android:layout_height="62dp"
             android:id="@+id/btnCrearPel" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
