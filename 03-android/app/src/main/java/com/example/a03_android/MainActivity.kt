@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         btn_adapter.setOnClickListener {
             irAListView()
             mostrarSnack(it,"Texto snack")
+        }
+
+        btn_recycler_view.setOnClickListener {
+            irARecyclerView()
         }
 
         //setSupportActionBar(toolbar)
@@ -82,6 +87,14 @@ class MainActivity : AppCompatActivity() {
             .make(view, texto, Snackbar.LENGTH_LONG)
             .setAction("Action", null).show()
 
+    }
+
+    fun irARecyclerView(){
+        val intentExplicito = Intent(
+            this,
+            ReciclerViewActivity::class.java
+        )
+        startActivity(intentExplicito)
     }
 
 }
