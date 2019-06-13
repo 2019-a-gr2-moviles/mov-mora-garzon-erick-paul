@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity() {
             irARecyclerView()
         }
 
+        btn_intent_respuesta.setOnClickListener {
+            irAIntentRespuesta()
+        }
+
         //setSupportActionBar(toolbar)
 
         /*fab.setOnClickListener { view ->
@@ -93,6 +97,14 @@ class MainActivity : AppCompatActivity() {
         val intentExplicito = Intent(
             this,
             ReciclerViewActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+    fun irAIntentRespuesta(){
+        val intentExplicito = Intent(
+            this,
+            IntentRespuestaActivity::class.java
         )
         startActivity(intentExplicito)
     }
