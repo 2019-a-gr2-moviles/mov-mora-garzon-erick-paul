@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Twitter</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="mira">Mira lo que está sucediendo en el mundo ahora</string>
+    <string name="inicio">Inicio</string>
+    <string name="retweets">Retweets</string>
+    <string name="gusta">Me gusta</string>
+    <string name="respuesta">Twittea tu respuesta</string>
+</resources>
