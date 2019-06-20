@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+            android:layout_width="269dp"
+            android:layout_height="47dp"
+            android:id="@+id/btn_comenzar"
+            android:background="#2196F3" android:textColor="@android:color/background_light"
+            android:textSize="24sp" android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/txvMira" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.571" android:text="@string/comenzar"/>
+    <TextView
+            android:text="@string/mira"
+            android:layout_width="278dp"
+            android:layout_height="137dp"
+            android:id="@+id/txvMira"
+            android:textColor="@android:color/black" android:textSize="30sp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginTop="148dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.538"/>
+    <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp" app:srcCompat="@drawable/logo"
+            android:id="@+id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/txvMira" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.192"/>
+
+</android.support.constraint.ConstraintLayout>
