@@ -16,10 +16,11 @@ class ReciclerView : AppCompatActivity() {
         val lista = arrayListOf<Tweet>()
         lista.add(
             Tweet(
-                "Alejandro Jodorowsky",
+                1,
+                "Alejandro Jodorow",
                 "@alejodo",
                 "1d",
-                "Siente que manipulas lo ligero como si fuera pesado y lo pesado como si fuera ligero. \n\n " +
+                "Siente que manipulas lo ligero como si fuera pesado y lo pesado como si fuera ligero. \n\n" +
                         "Cuando deposites un objeto hazlo con la misma delicadeza con que te despides de tu amada.",
                 4,
                 72,
@@ -29,6 +30,7 @@ class ReciclerView : AppCompatActivity() {
         )
         lista.add(
             Tweet(
+                2,
                 "El Comercio",
                 "@elcomercio",
                 "7h",
@@ -42,6 +44,7 @@ class ReciclerView : AppCompatActivity() {
         )
         lista.add(
             Tweet(
+                3,
                 "Sandra Sanchez",
                 "@KushiRimay",
                 "14 jun",

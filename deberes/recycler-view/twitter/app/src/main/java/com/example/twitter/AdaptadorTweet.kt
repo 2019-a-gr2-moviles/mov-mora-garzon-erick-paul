@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 
 class AdaptadorTweet(
@@ -16,6 +17,8 @@ class AdaptadorTweet(
     RecyclerView.Adapter<AdaptadorTweet.MyViewHolder>() {
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        var fotoPerfil: ImageView
+        var fotoTweet: ImageView
         var autorTextView: TextView
         var nombreUsuarioTextView: TextView
         var tiempoTextView: TextView
@@ -23,6 +26,7 @@ class AdaptadorTweet(
         var numComentariosTextView: TextView
         var numReTextView: TextView
         var numMeGustaTextView: TextView
+        var idUsuario: Int = 0
        /* var numComentariosTextView: Int = 0
         var numReTextView: Int = 0
         var numMeGustaTextView: Int = 0*/
@@ -30,6 +34,8 @@ class AdaptadorTweet(
         //var accionBoton: Button
 
         init {
+            fotoPerfil = view.findViewById(R.id.img_perfil) as ImageView
+            fotoTweet = view.findViewById(R.id.img_tweet) as ImageView
             autorTextView = view.findViewById(R.id.txt_autor) as TextView
             nombreUsuarioTextView = view.findViewById(R.id.txt_nombreUsuario) as TextView
             tiempoTextView = view.findViewById(R.id.txt_tiempo) as TextView
@@ -44,6 +50,7 @@ class AdaptadorTweet(
 
             layout.setOnClickListener {
                 val tweet = Tweet(
+                            idUsuario,
                             autorTextView.text.toString(),
                             nombreUsuarioTextView.text.toString(),
                             tiempoTextView.text.toString(),
@@ -88,6 +95,7 @@ class AdaptadorTweet(
 
     override fun onBindViewHolder(myViewHolder: AdaptadorTweet.MyViewHolder, position: Int) {
         val tweet = listaTweets[position]
+        myViewHolder.idUsuario = tweet.idUsuario
         myViewHolder.autorTextView.text = tweet.autor
         myViewHolder.nombreUsuarioTextView.text = tweet.nombreDeUsuario
         myViewHolder.tiempoTextView.text = tweet.tiempo
@@ -96,6 +104,21 @@ class AdaptadorTweet(
         myViewHolder.numReTextView.text = tweet.numRe.toString()
         myViewHolder.numMeGustaTextView.text = tweet.numMeGusta.toString()
         //myViewHolder.fechaTextView.text = tweet.fecha
+
+        when (tweet.idUsuario){
+            1 -> {
+                myViewHolder.fotoPerfil.setImageResource(R.drawable.foto1)
+                myViewHolder.fotoTweet.setImageResource(R.drawable.tweet1)
+            }
+            2 -> {
+                myViewHolder.fotoPerfil.setImageResource(R.drawable.foto2)
+                myViewHolder.fotoTweet.setImageResource(R.drawable.tweet2)
+            }
+            3 -> {
+                myViewHolder.fotoPerfil.setImageResource(R.drawable.foto3)
+                myViewHolder.fotoTweet.setImageResource(R.drawable.tweet3)
+            }
+        }
     }
 
 

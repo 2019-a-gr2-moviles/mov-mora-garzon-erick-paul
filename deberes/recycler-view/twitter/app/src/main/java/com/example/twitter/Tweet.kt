@@ -5,6 +5,7 @@ import android.os.Parcelable
 import java.util.*
 
 class Tweet(
+    var idUsuario: Int,
     var autor: String,
     var nombreDeUsuario: String,
     var tiempo: String,
@@ -16,6 +17,7 @@ class Tweet(
 
 ): Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readInt(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -29,6 +31,7 @@ class Tweet(
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(idUsuario)
         parcel.writeString(autor)
         parcel.writeString(nombreDeUsuario)
         parcel.writeString(tiempo)
