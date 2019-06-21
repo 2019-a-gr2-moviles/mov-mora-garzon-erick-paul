@@ -1,5 +1,6 @@
 package com.example.twitter
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
@@ -13,6 +14,29 @@ class MostrarTweet : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mostrar_tweet)
 
+        val tweet: Tweet?= this.intent.getParcelableExtra<Tweet>("tweet")
+
+        txt_autor2.text = tweet?.autor
+        txt_nombreUsuario2.text = tweet?.nombreDeUsuario
+        txt_contenido2.text = tweet?.contenido
+        //txt_fecha.text = tweet?.fecha
+        txt_numRe2.text = tweet?.numRe.toString()
+        txt_numMeGusta2.text = tweet?.numMeGusta.toString()
+
+        when (tweet?.idUsuario){
+            1 -> {
+                img_perfil2.setImageResource(R.drawable.foto1)
+                img_tweet2.setImageResource(R.drawable.tweet1)
+            }
+            2 -> {
+                img_perfil2.setImageResource(R.drawable.foto2)
+                img_tweet2.setImageResource(R.drawable.tweet2)
+            }
+            3 -> {
+                img_perfil2.setImageResource(R.drawable.foto3)
+                img_tweet2.setImageResource(R.drawable.tweet3)
+            }
+        }
 
 
 
@@ -49,42 +73,9 @@ class MostrarTweet : AppCompatActivity() {
             )
         )
 
-        iniciarRecylerView(listaCom, this, rv_comentarios)
+        //iniciarRecylerView(listaCom, this, rv_comentarios)
 
 
-
-
-
-
-
-
-
-
-
-
-        val tweet: Tweet?= this.intent.getParcelableExtra<Tweet>("tweet")
-
-        txt_autor2.text = tweet?.autor
-        txt_nombreUsuario2.text = tweet?.nombreDeUsuario
-        txt_contenido2.text = tweet?.contenido
-        //txt_fecha.text = tweet?.fecha
-        txt_numRe2.text = tweet?.numRe.toString()
-        txt_numMeGusta2.text = tweet?.numMeGusta.toString()
-
-        when (tweet?.idUsuario){
-            1 -> {
-                img_perfil2.setImageResource(R.drawable.foto1)
-                img_tweet2.setImageResource(R.drawable.tweet1)
-            }
-            2 -> {
-                img_perfil2.setImageResource(R.drawable.foto2)
-                img_tweet2.setImageResource(R.drawable.tweet2)
-            }
-            3 -> {
-                img_perfil2.setImageResource(R.drawable.foto3)
-                img_tweet2.setImageResource(R.drawable.tweet3)
-            }
-        }
 
     }
 
@@ -100,7 +91,7 @@ class MostrarTweet : AppCompatActivity() {
 
 
 
-
+/*
 
     fun iniciarRecylerView(
         lista: List<Comentario>,
@@ -117,9 +108,17 @@ class MostrarTweet : AppCompatActivity() {
         recycler_view.layoutManager = LinearLayoutManager(actividad)
 
         adaptadorComentario.notifyDataSetChanged()
-    }
+    }*/
 
+    /*fun irAMostrarTweet(comentario: Comentario){
+        val intentExplicito = Intent(
+            this,
+            MostrarTweet::class.java
+        )
 
+        intentExplicito.putExtra("comentario",comentario)
+        startActivity(intentExplicito)
+    }*/
 
 
 }

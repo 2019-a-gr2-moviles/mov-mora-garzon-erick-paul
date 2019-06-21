@@ -17,7 +17,7 @@ class AdaptadorComentario(
     RecyclerView.Adapter<AdaptadorComentario.MyViewHolder>() {
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var fotoPerfilCom: ImageView
+        //var fotoPerfilCom: ImageView
         var autorComTextView: TextView
         var nombreUsuarioComTextView: TextView
         var tiempoComTextView: TextView
@@ -33,7 +33,7 @@ class AdaptadorComentario(
         //var accionBoton: Button
 
         init {
-            fotoPerfilCom = view.findViewById(R.id.img_perfil_com) as ImageView
+            //fotoPerfilCom = view.findViewById(R.id.img_perfil_com) as ImageView
             autorComTextView = view.findViewById(R.id.txt_autor_com) as TextView
             nombreUsuarioComTextView = view.findViewById(R.id.txt_nombreUsuario_com) as TextView
             tiempoComTextView = view.findViewById(R.id.txt_tiempo_com) as TextView
@@ -44,7 +44,7 @@ class AdaptadorComentario(
             //fechaTextView = view.findViewById(R.id.txt_fecha) as TextView
             //accionBoton = view.findViewById(R.id.btn_accion) as Button
 
-            val layout = view.findViewById(R.id.constraint_layout2) as ConstraintLayout
+            val layout = view.findViewById(R.id.constraint_layout) as ConstraintLayout
 
             layout.setOnClickListener {
                 val comentario = Comentario(
@@ -58,7 +58,7 @@ class AdaptadorComentario(
                     Integer.parseInt(numMeGustaTextView.text.toString())*//*,
                             fechaTextView.text.toString()*/
                 )
-                //irAMostrarComentario(comentario)
+                //irAMostrarTweet(comentario)
 
                 Log.i("recycler-view","Layout presionado")
             }
@@ -66,8 +66,8 @@ class AdaptadorComentario(
 
         }
 
-        /*fun irAMostrarComentario(comentario:Comentario){
-            contexto.irAMostrarComentario(comentario)
+        /*fun irAMostrarTweet(comentario:Comentario){
+            contexto.irAMostrarTweet(comentario)
         }*/
 
     }
@@ -103,7 +103,7 @@ class AdaptadorComentario(
         myViewHolder.numMeGustaTextView.text = tweet.numMeGusta.toString()*/
         //myViewHolder.fechaTextView.text = tweet.fecha
 
-        when (comentario.idComentario){
+        /*when (comentario.idComentario){
             1 -> {
                 myViewHolder.fotoPerfilCom.setImageResource(R.drawable.foto_com1)
 
@@ -116,7 +116,7 @@ class AdaptadorComentario(
                 myViewHolder.fotoPerfilCom.setImageResource(R.drawable.foto_com3)
 
             }
-        }
+        }*/
     }
 
 

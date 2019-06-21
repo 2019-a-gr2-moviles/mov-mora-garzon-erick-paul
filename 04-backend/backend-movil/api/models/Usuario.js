@@ -55,9 +55,19 @@ module.exports = {
     correo: {
       type: 'string',
       isEmail: true
-    }
+    },
+	
+	//Configuracion del papa
+	serviciosDeUsuario: { // Nombre atributo de la relacion
+		collection: 'servicio', //Nombre del modelo a relacionar
+		via: 'fkUsuario' //Nombre atributo FK del otro modelo
+	}
+  
+  
   },
-
+  
+  
+  
 };
 
 // http://localhost:1337/usuario
