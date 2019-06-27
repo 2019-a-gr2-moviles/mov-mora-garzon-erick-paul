@@ -38,6 +38,10 @@ class MainActivity : AppCompatActivity() {
             irAIntentRespuesta()
         }
 
+        btn_http.setOnClickListener {
+            irAIntentHttp()
+        }
+
         //setSupportActionBar(toolbar)
 
         /*fab.setOnClickListener { view ->
@@ -105,6 +109,14 @@ class MainActivity : AppCompatActivity() {
         val intentExplicito = Intent(
             this,
             IntentRespuestaActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+    fun irAIntentHttp(){
+        val intentExplicito = Intent(
+            this,
+            ConexionHttpActivity::class.java
         )
         startActivity(intentExplicito)
     }

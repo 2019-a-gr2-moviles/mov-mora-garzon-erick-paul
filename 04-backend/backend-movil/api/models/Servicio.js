@@ -14,7 +14,7 @@ module.exports = {
 	//Configuracion del hijo
     fkUsuario: { //Nombre del FK para la relacion
       model: 'usuario', //Nombre del modelo a relacionar (papa)
-	  required: true // Opcional -> Siempre ingresar el FK
+	  //required: true // Opcional -> Siempre ingresar el FK
 	}
 
   },
