@@ -1,6 +1,6 @@
 package com.example.a03_android
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.beust.klaxon.Klaxon
@@ -9,6 +9,7 @@ import java.util.*
 
 import com.github.kittinunf.result.Result.*
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 
 class ConexionHttpActivity : AppCompatActivity() {
 
@@ -55,7 +56,7 @@ class ConexionHttpActivity : AppCompatActivity() {
                     "Fecha ${it.fechaCreacion}"
                 )
 
-               /* it.usuariosDeEmpresa.forEach {
+                /*it.usuariosDeEmpresa.forEach {
                     Log.i("http",
                         "Nombre ${it.nombre}")
                     Log.i("http",
@@ -73,7 +74,7 @@ class ConexionHttpActivity : AppCompatActivity() {
         }
 
 
-        val url = "http://172.31.104.105:1337/empresa/1" //ip no con localhost
+        val url = "http://172.31.104.100:1337/empresa/1" //ip no con localhost
 
             url.httpGet()
             .responseString { request, response, result ->
@@ -97,5 +98,29 @@ class ConexionHttpActivity : AppCompatActivity() {
                 }
             }
 
+        val urlCrearEmpresa = "http://172.31.104.100:1337/empresa"
+
+        val parametrosCrearEmpresa = listOf(
+            "nombre" to "Manticore Labs2", //este sirve
+            "apellido" to "Mora", //colados
+            "sueldo" to 12.20, //colados
+            "casado" to false, //colados
+            "hijos" to null //colados
+        )
+
+        urlCrearEmpresa
+            .httpPost(parametrosCrearEmpresa)
+            .responseString{request, response, result ->
+                when(result){
+                    is Failure -> {
+                        val error = result.getException()
+                        Log.i("http", "Error: ${error}")
+                    }
+                    is Success -> {
+                        val empresaString = result.get()
+                        Log.i("http", "$empresaString")
+                    }
+                }
+            }
     }
 }

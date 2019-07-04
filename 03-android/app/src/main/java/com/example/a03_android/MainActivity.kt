@@ -2,9 +2,9 @@ package com.example.a03_android
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -40,6 +40,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_http.setOnClickListener {
             irAIntentHttp()
+        }
+
+        btnMapa.setOnClickListener {
+            irAMapa()
         }
 
         //setSupportActionBar(toolbar)
@@ -117,6 +121,14 @@ class MainActivity : AppCompatActivity() {
         val intentExplicito = Intent(
             this,
             ConexionHttpActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+    fun irAMapa(){
+        val intentExplicito = Intent(
+            this,
+            MapsActivity::class.java
         )
         startActivity(intentExplicito)
     }
