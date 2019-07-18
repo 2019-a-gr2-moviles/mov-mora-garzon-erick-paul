@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         btn_parcelable.setOnClickListener {
             irAParcelable()
 
-
         }
 
         btn_adapter.setOnClickListener {
@@ -45,6 +44,16 @@ class MainActivity : AppCompatActivity() {
         btnMapa.setOnClickListener {
             irAMapa()
         }
+
+        btn_ciclo_vida.setOnClickListener {
+            irACicloDeVida()
+        }
+
+        btn_fragmento.setOnClickListener {
+            irAFragmento()
+        }
+
+
 
         //setSupportActionBar(toolbar)
 
@@ -129,6 +138,22 @@ class MainActivity : AppCompatActivity() {
         val intentExplicito = Intent(
             this,
             MapsActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+    fun irACicloDeVida(){
+        val intentExplicito = Intent(
+            this,
+            CicloVidaActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+    fun irAFragmento(){
+        val intentExplicito = Intent(
+            this,
+            FragmentosActivity::class.java
         )
         startActivity(intentExplicito)
     }
