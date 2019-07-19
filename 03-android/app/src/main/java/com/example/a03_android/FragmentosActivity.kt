@@ -42,9 +42,9 @@ class FragmentosActivity : AppCompatActivity() {
         // 2) Empezar la transaccion
         val transaccion = fragmentManager.beginTransaction()
         // 3) Definir la instancia del fragmento
-        val primerFragmento = SegundoFragment()
+        val segundoFragmento = SegundoFragment()
         // 4) Reemplazamos el fragmento
-        transaccion.replace(R.id.cly_fragmentos, primerFragmento)
+        transaccion.replace(R.id.cly_fragmentos, segundoFragmento)
         // 5) Terminar la transaccion
         transaccion.commit()
     }
@@ -55,9 +55,9 @@ class FragmentosActivity : AppCompatActivity() {
         // 2) Empezar la transaccion
         val transaccion = fragmentManager.beginTransaction()
         // 3) Definir la instancia del fragmento
-        val primerFragmento = TercerFragment()
+        val tercerFragmento = TercerFragment()
         // 4) Reemplazamos el fragmento
-        transaccion.replace(R.id.cly_fragmentos, primerFragmento)
+        transaccion.replace(R.id.cly_fragmentos, tercerFragmento)
         // 5) Terminar la transaccion
         transaccion.commit()
     }
